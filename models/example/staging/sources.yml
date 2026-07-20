@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stripe
+    schema: dbo
+
+    tables:
+      - name: customers
+      - name: orders
+      - name: payments
