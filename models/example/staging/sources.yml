@@ -7,4 +7,16 @@ sources:
     tables:
       - name: customers
       - name: orders
+
+      # Check for stale sources (Freshness)
+      
+        # config: 
+          # freshness:
+          #   warn_after:
+          #     count: count
+          #     period: period
+          #   error_after:
+          #     count: err_count
+          #     period: err_period
+          # loaded_at_field: loaded_at_field
       - name: payments
