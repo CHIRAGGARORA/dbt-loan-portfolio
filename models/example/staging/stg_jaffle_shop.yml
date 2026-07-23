@@ -29,5 +29,11 @@ models:
               to: ref('stg_customers')
               field: customer_id
 
-        
+  - name: stg_stripe_payments
+    columns:
+      - name: payment_id
+        data_tests:
+          - unique
+          - not_null
+          
         

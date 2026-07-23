@@ -6,7 +6,19 @@ sources:
 
     tables:
       - name: customers
+        columns:
+          - name: ID
+            data_tests:
+              - unique
+              - not_null
+              
       - name: orders
+        columns:
+          - name: ID
+            data_tests:
+              - unique
+              - not_null
+              
 
       # Check for stale sources (Freshness)
       
@@ -20,3 +32,8 @@ sources:
           #     period: err_period
           # loaded_at_field: loaded_at_field
       - name: payments
+        columns:
+          - name: ID
+            data_tests:
+              - unique
+              - not_null
