@@ -2,24 +2,27 @@ version: 2
 
 sources:
   - name: stripe
+    description: A clone of a Fabric warehouse
     schema: dbo
-
     tables:
       - name: customers
+        description: Raw customers data
         columns:
           - name: ID
+            description: Primary key for customers data
             data_tests:
               - unique
               - not_null
               
       - name: orders
+        description: Raw orders data
         columns:
           - name: ID
+            description: Primary key for orders data
             data_tests:
               - unique
               - not_null
               
-
       # Check for stale sources (Freshness)
       
         # config: 
@@ -31,9 +34,12 @@ sources:
           #     count: err_count
           #     period: err_period
           # loaded_at_field: loaded_at_field
+
       - name: payments
+        description: Raw payments data
         columns:
           - name: ID
+            description: Primary key for payments data
             data_tests:
               - unique
               - not_null
