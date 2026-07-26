@@ -22,17 +22,10 @@ models:
         description: "{{ doc('status') }}"
         data_tests:
           - accepted_values:
-            arguments:
-              values: 
-                - returned
-                - completed
-                - return_pending
-                - shipped
-                - placed
+              values: ["returned", "completed", "return_pending", "shipped", "placed"]
       - name: customer_id
         data_tests:
           - relationships:
-            arguments:
               to: ref('stg_customers')
               field: customer_id
 
